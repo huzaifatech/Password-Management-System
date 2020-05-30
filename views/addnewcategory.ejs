@@ -1,0 +1,26 @@
+<%- include('header') %>
+
+    <div class="container">
+    <div id="signupbox" class="center-block">
+
+        <h1 style="text-align: center;">Add New Category</h1>
+        <% if(errors != ''){ %>
+          <center><h4 class="text-danger">Note!: <%= errors.passwordCategory.msg %></h4></center>
+        <% } %>
+        <% if(success != ''){ %>
+          <center><h4 class="text-success">Note!: <%= success %></h4></center>
+        <% } %>
+ 
+        <hr>
+        <form class="form-horizontal" method="POST" action="/add-new-category" style="text-align: center;">
+        <div class="col-md-4">
+          <label>Category:</label>
+        </div>
+        <div class="col-md-8">
+          <input class="roundinput" type="text" name="passwordCategory" placeholder=" Enter New Category" required><br><br>
+        </div>
+          <input class="btn btn-success" value="Add Category" type="submit" placeholder="Enter"><br><br>
+          <p><a href="/passwordcategory">'View All Categories'</a></p>
+        </form>
+    </div>
+    <%- include('footer') %>

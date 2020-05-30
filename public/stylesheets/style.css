@@ -1,0 +1,56 @@
+body {
+  padding: 0px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+.navbar-default{
+  background-color:#e0eeff;
+}
+.btn-success{
+  padding:10px 20px;
+}
+.bl{
+  border-left: solid #a5a4a4 0.5px;
+  padding:10px 10px;
+  margin: 5px 0px 0px 0px;
+  height: 40px;
+}
+.roundinput{
+  border: solid 1px;
+  border-radius:  5px;
+  height: 35px;
+  width: 340px;
+}
+.center-block{
+  border-radius: 5px;
+  padding-top: 0% !important;
+  width: 650px;
+  border: double 3px;
+}
+h3{
+  margin-top: 0px;
+}
+.bg-info{
+  padding: 20px 20px 0px 20px;
+  height: 70px;
+}
+
+.note{
+  MARGIN-TOP: 20px;
+}
+div.about{
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  width: 550px;
+}
+thead{
+  background: darkgray;
+}
+
+th,td{
+  padding: 8px 30px !important;
+}

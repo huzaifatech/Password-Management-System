@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!--  Viewport -->
+        <meta name="viewport" content="width=device-width,initial-scale=1" />
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" />
+        <!-- CSS FILE -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" />
+        <!--  Jquery  -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <!--  JAVAScript  -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        <!-- ckeditor -->
+        <script src="https://cdn.ckeditor.com/4.14.0/standard/ckeditor.js"></script>
+        
+        <link rel="stylesheet"  href='/stylesheets/style.css'>
+
+        <title><%= title %></title>
+    </head>
+    <body>
+        <nav class="navbar navbar-default">
+            <div class="container">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="#">Password Management System</a>
+                </div>
+                <ul class="nav navbar-nav">
+                    <li ><a href="/dashboard"><b>Home</b></a></li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Password Categories <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="/add-new-category">Add New Categories</a></li>
+                            <li><a href="/passwordcategory">View All Category</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Password Details <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="/add-new-password">Add New Password</a></li>
+                            <li><a href="/view-all-password">View All Password</a></li>
+                        </ul>
+                    </li>
+                    <li class="navbar-item">
+                        <a href="/logout"><b>Logout</b></a>
+                    </li>
+                </ul>
+
+                <div class="navbar-head" style="float: right;">
+                    <a class="navbar-brand bl" href="#">
+                        Logged In As : <% if(loginUser){ %> <%= loginUser %> <% } %>
+                    </a>
+                </div>
+            </div>
+        </nav>

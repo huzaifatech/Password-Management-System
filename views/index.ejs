@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!--  Viewport -->
+        <meta name="viewport" content="width=device-width,initial-scale=1" />
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" />
+        <!--  Jquery  -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <!--  JAVAScript  -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        <title><%= title %></title>
+        <!--  Viewport -->
+        <meta name="viewport" content="width=device-width,initial-scale=1" />
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" />
+        <!--  Jquery  -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <!--  JAVAScript  -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+        <link rel="stylesheet" href="/stylesheets/style.css" />
+
+    </head>
+    <body>
+        <h1 class="text-center"><%= title %></h1>
+        <div class="center-block">
+   
+            <div class="bg-info">
+                <h3>Login Form</h3>
+            </div>
+              <% if(msg != ''){ %>
+                  <center><h4 class="text-danger note">Note!: <%= msg %></h4></center>
+              <% } %>
+                <hr>
+              <form class="form-horizontal" method="POST" action="/" style="text-align: center;">
+
+                <div class="col-md-4">
+                  <label for="username">Username:</label>
+                </div>
+                <div class="col-md-8">
+                  <input type="text" class="roundinput" name="username" placeholder=" Enter Username" required />
+                  <br><br>
+                </div>
+                <div class="col-md-4">
+                  <label for="Password">Password:</label>
+                </div>
+                <div class="col-md-8">
+                    <input type="password" class="roundinput" name="password" placeholder=" Enter Password" required/>
+                  <br><br>
+                </div>
+                    <input class="btn btn-success" value="Login" type="submit" placeholder="Enter" />
+                    <br /><br>
+                    <h5>No Account? &nbsp;<a href="/signup">Create New Account / Signup</a></h5>
+                </form>
+        </div>
+    </body>
+</html>

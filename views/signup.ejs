@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      	 		<!--  Viewport -->
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+	
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+	 		<!--  Jquery  -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js">
+  </script>
+	 		<!--  JAVAScript  -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <title><%= title %></title>    	 		<!--  Viewport -->
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+	
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+	 		<!--  Jquery  -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js">
+  </script>
+	 		<!--  JAVAScript  -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+     <center><h1><%= title %></h1></center>
+    <div id="signupbox"  class="center-block">
+      <div class="bg-info">
+        <h3 >Signup Form</h3>
+      </div>
+            <% if(msg != ''){ %>
+                <center><h4 class="text-danger note">Note!: <%= msg %></h4></center>
+            <% } %>
+        <hr>
+    <form class="form-horizontal" method="POST" action="/signup" style="text-align: center;">
+    <!--  username -->
+    <div class="col-md-4 lab" >
+      <label>Username:</label>
+    </div>
+    <div class="col-md-8">
+      <input type="text" name="username" placeholder=" Enter Username" class="roundinput" required><br><br>
+    </div>
+    <!-- email -->
+    <div class="col-md-4 lab" >
+      <label>Email:</label>
+    </div>
+    <div class="col-md-8">
+      <input type="email" name="email" placeholder=" Enter Email" class="roundinput" required><br><br>
+    </div>
+    <!-- password-->
+    <div class="col-md-4 lab" >
+      <label>Password:</label>
+    </div>
+    <div class="col-md-8">
+      <input type="password" name="password"  placeholder=" Enter password" required class="roundinput" minlength="4"><br><br>
+    </div>
+    <!-- conf password -->
+    <div class="col-md-4  lab" >
+      <label>Confirm Password:</label>
+    </div>
+    <div class="col-md-8">
+      <input type="password" name="confpassword"  placeholder=" Rewrite password" class="roundinput" required minlength="4"><br><br>
+    </div>
+      <input class="btn btn-success" value="Signup" type="submit" placeholder="Enter"><br><br>
+      <p>Already Have Account? <a href="/"> Login </a></p>
+    </form>
+</div>
+ </body>
+</html>

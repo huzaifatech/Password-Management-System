@@ -1,0 +1,37 @@
+  <%- include('header') %>
+  <div class="container">
+            <div id="signupbox" style="border: dashed 3px; width: 500px; margin-bottom: 15px;" class="center-block">
+              <% if(success != ''){ %>
+                <pre>
+                   <center><h4 class="text-success">Note!: <%= success %></h4></center>
+               </pre>
+               <% } %>
+                <h1 style="text-align: center;">Edit Password Details</h1>
+                <form class="form-horizontal" method="POST" action="/password-details/edit/<%= record._id %>" style="text-align: center;">
+                    <label style="margin-left: 80px;"> Password category:</label>&nbsp;&nbsp;&nbsp;&nbsp;
+                    <select  name="pass_cat">
+                        <option value="">~Choose Category~</option>
+                        <% if(records.length > 0){ records.forEach(function(row){ %>
+                        <option value="<%= row.password_category %>"<% if(row.password_category==record.password_category){ %> selected <% } %>><%= row.password_category %></option>
+                        <% })} %>
+                    </select>
+    
+                    <hr>
+                    <label style="margin-left: 80px;">Project Name :&nbsp;&nbsp;</label>
+                    <input type="textbox" name="project_name" placeholder="Enter Your Project Name" value="<%= record.project_name %>">
+                    <hr>
+                    <label>Password Details :</label>
+                    <textarea style="width: 100%;" id="editor" name="pass_details" placeholder="Password Details"><%= record.password_details %></textarea><br />
+                    <hr>
+                    <input type="hidden" name="id" value="<%= record._id %>">
+                    <input class="btn btn-success" value="Edit Category" type="submit" placeholder="Enter" /><br />
+                    <br/>
+                    <p><a href="/view-all-password">"Cancel"</a></p>
+                </form>
+            </div>
+        </div>
+
+        <script>
+            CKEDITOR.replace("editor");
+        </script>
+<%- include('footer') %>
